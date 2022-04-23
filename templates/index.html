@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<title>Heart Disease Test</title>
+    </head>
+    <body style="background-color:#e6e1e1">
+        <div class="container">
+        <form action="\result" method="POST">
+            <h2 style="text-align:center; margin-top: 20px;">HEART DISEASE TEST FORM</h2><br>
+        <fieldset>
+            <div class="card card-body" >
+                <div class="form-group  row">
+                  <div class="col-sm-3">
+                        <label for="age">Age</label>
+					    <input class="form-control" type="text" id="mytextbox" name="age" required>
+                    </div>
+                <div class="col-sm-3">
+                    <label for="sex">Sex</label>
+                    <select class="form-control"  name="sex" required>
+                      <option disabled selected value> -- Select an Option -- </option>
+                      <option value = "1">Male</option>
+                      <option value = "0">Female</option>
+                    </select>
+                  </div>  
+                  </div>
+                  <br>
+            <div class="form-group  row">
+                <div class="col-sm">
+                    <label for="Smoking">Smoking</label>
+						<select class="form-control" name = "Smoking" required>
+							<option disabled selected value> -- Select an Option -- </option>
+							<option value = "1">Yes</option>
+							<option value = "0">No</option>
+						</select>  
+                        </div>
+                        <div class="col-sm">
+                        <label for="Stroke">Stroke</label>
+						<select class="form-control" name = "Stroke" required>
+							<option disabled selected value> -- Select an Option -- </option>
+							<option value = "1">Yes</option>
+							<option value = "0">No</option>
+						</select> 
+                        </div> 
+                        <div class="col-sm">
+                            <label for="BMI">Body Mass Index</label>
+                             <input type="number"  class="form-control" name="BMI"  required> 
+                        </div>
+                        <div class="col-sm">
+                            <label for="DiffWalking">Difficult in Walking</label>
+                             <select class="form-control" name="DiffWalking" required>
+                             <option disabled selected value> -- Select an Option -- </option>
+                             <option value = "1">Yes</option>
+                             <option value = "0">No</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group row">
+                        <div class="col-sm">
+                            <label for="MentalHealth">Mental Health</label>
+                            <input type="number"  class="form-control" name="MentalHealth"  required> 
+                        </div>
+                        <div class="col-sm">
+                            <label for="AlcoholDrinking">Alcohol Drinking</label>
+                            <select class="form-control" name="AlcoholDrinking" required>
+                            <option disabled selected value> -- Select an Option -- </option>
+                            <option value = "1">Yes</option>
+                            <option value = "0">No</option>
+                             </select>
+                        </div>
+                    <div class="col-sm">
+                        <label for="Race">Race </label>
+                        <select class="form-control" name="Race" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value = "5">White</option>
+                        <option value = "2">Black </option>
+                        <option value = "3"> Hispanic </option>
+                        <option value = "1">Asian</option>
+                        <option value = "0">American Indian/Alaskan Native</option>
+                        <option value = "4">Other</option>
+                    </select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="PhysicalActivity">Physical Activity</label>
+					    <select class="form-control" name="PhysicalActivity" required>
+					    <option disabled selected value> -- Select an Option -- </option>
+						<option value = "1">Yes</option>
+						<option value = "0">No</option>
+					</select>
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-group  row">
+                    <div class="col-sm">
+                        <label for="Diabetic">Diabetic </label>
+						<select  class="form-control" name="Diabetic" required>
+						<option disabled selected value> -- Select an Option -- </option>
+						<option value = "1">Yes</option>
+						<option value = "0">No</option>
+						</select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="GenHealth">General Health</label>
+                        <select class="form-control" name = "GenHealth" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value = "0">Excellent</option>
+                        <option value = "1">Very good</option>
+                        <option value = "3">Good</option>
+                        <option value = "2">Fair</option>
+                        <option value = "4">Poor</option>
+                    </select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="Asthma">Asthma</label>
+                            <select  class="form-control" name = "Asthma" required>
+                            <option disabled selected value> -- Select an Option -- </option>
+                            <option value = "1">Yes</option>
+                            <option value = "0">No</option>
+                            </select>
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-group  row">
+                    <div class="col-sm">
+                        <label for="SkinCancer">Skin Cancer</label>
+						<select  class="form-control" name="SkinCancer" required>
+						<option disabled selected value> -- Select an Option -- </option>
+						<option value = "1">Yes</option>
+						<option value = "0">No</option>
+						</select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="PhysicalHealth">Physical Health</label>
+                        <input type="number"  class="form-control" name="PhysicalHealth"  required> 
+                    </div>
+                    <div class="col-sm">
+                        <label for="KidneyDisease">Kidney Disease</label>
+                            <select  class="form-control" name = "KidneyDisease" required>
+                            <option disabled selected value> -- Select an Option -- </option>
+                            <option value = "1">Yes</option>
+                            <option value = "0">No</option>
+                            </select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="SleepTime">Sleep Time</label>
+                        <input type="number"  class="form-control" name="SleepTime"  required> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Result">
+                </div>
+                 <br> 
+                 <h4> {{ prediction }} </h4> 
+            </div>
+            </fieldset>    
+            </form>
+        </div>
+
+      
+    </body>
+</html>
